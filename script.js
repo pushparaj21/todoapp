@@ -1,21 +1,25 @@
 let myData = document.getElementById("inputData");
 let newLocal = "dataAddButton";
 let btn = document.getElementById(newLocal);
-//addon
-// onkeyup event
+let tmpContant = document.getElementById("todo-template").content;
+let hlist = document.getElementById("todo-list");
 
-//addonend
-//today test
 let listdata = [];
-//today test end
+
 btn.addEventListener("click", function () {
   datatoAdd = myData.value;
   console.log(datatoAdd);
   listdata.push(datatoAdd);
   console.log(listdata);
-  let createdElement = document.createElement("h1");
-  createdElement.innerText = datatoAdd;
-  dataContainer.appendChild(createdElement);
+  // let createdElement = document.createElement("h1");
+  // createdElement.innerText = datatoAdd;
+  // dataContainer.appendChild(createdElement);
+  let row = tmpContant.cloneNode(true);
+  // let createdElement = document.createElement("h1");
+  // createdElement.innerText = element;
+  row.querySelector(".grid-item").textContent = datatoAdd;
+
+  hlist.appendChild(row);
   localStorage.todo = JSON.stringify(listdata);
   //today test
   // if (localStorage.todo == undefined) {
@@ -56,5 +60,13 @@ window.addEventListener(
     } else {
       listdata = [...JSON.parse(localStorage.todo)];
     }
+    listdata.forEach((element) => {
+      let row = tmpContant.cloneNode(true);
+      // let createdElement = document.createElement("h1");
+      // createdElement.innerText = element;
+      row.querySelector(".grid-item").textContent = element;
+
+      hlist.appendChild(row);
+    });
   })
 );

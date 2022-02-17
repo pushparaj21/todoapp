@@ -37,8 +37,7 @@ body {
 #btnClick:hover {
   background-color: rgb(113, 172, 192);
 }
-.data {
-}
+
 /*additional*/
 .active {
   opacity: 1;
@@ -53,9 +52,10 @@ body {
   font-size: 30px;
   text-align: center;
   border-radius: 4px;
-  margin: 10px;
+  margin: auto;
+  margin-top: 20px;
   min-height: 20rem;
   width: 15rem;
 }
-#dataContainer {
-  
+#todo-list {
+}
