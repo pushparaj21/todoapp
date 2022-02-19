@@ -58,5 +58,7 @@ body {
   min-height: 20rem;
   width: 15rem;
 }
-#todo-list {
+#todo-list 
+display: flex;
+flex-wrap: wrap;
 }
