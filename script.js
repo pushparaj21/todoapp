@@ -21,37 +21,9 @@ btn.addEventListener("click", function () {
 
   hlist.appendChild(row);
   localStorage.todo = JSON.stringify(listdata);
-  //today test
-  // if (localStorage.todo == undefined) {
-  //   localStorage.todo = "[]";
-  // } else {
-  //   listdata = JSON.parse(localStorage.todo);
-  // }
-  // localStorage.todo = JSON.stringify(datatoAdd);
-  //today test
   myData.value = "";
-  // if (localStorage.getItem("itemsjson") == null) {
-  //   itemsjsonArrey = [];
-  //   itemsjsonArrey.push(datatoAdd);
-  // } else {
-  //   itemsjsonArrey = localStorage.getItem("itemsjson");
-  // }
 });
 
-// let dataContainer = document.getElementById("dataContainer");
-// btn.addEventListener("click", function () {
-//   let createdElement = document.createElement("h1");
-//   createdElement.innerText = "it is bajji paji";
-//   dataContainer.appendChild(createdElement);
-// });
-// window.addEventListener(
-//   "load",
-//   (firstFun = () => {
-//     if (localStorage.todo == undefined) {
-//       localStorage.todo = "[]";
-//     }
-//   })
-// );
 window.addEventListener(
   "load",
   (uu = () => {
